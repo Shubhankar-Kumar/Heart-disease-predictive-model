@@ -11,15 +11,15 @@
 <body>
     <h2>We are making a heart disease predictor let see how our model perform in real world scenerio</h2>
     <div class="main_container">
-        <form action="" method="post">
+        <form action="/make_prediction" method="post">
+            <label for="age">Enter your age :- </label>
+            <input type="number" min=5 max=100 name="age">
             <label for="sex ">Enter your gender :- </label>
             <select name="sex " id="">
                 <option selected disabled>Select from the below</option>
                 <option value=0>Female</option>
                 <option value=1>Male</option>
             </select>
-            <label for="age">Enter your age :- </label>
-            <input type="number" min=5 max=100 name="age">
             <label for="Chest_pain">Enter your chest pain level :- </label>
             <select name="chest pain type" id="">
                 <option selected disabled>Select from the below</option>
@@ -80,6 +80,7 @@
             <button type="submit">Predict</button>
 
         </form>
+        <h2>{{ pred }}</h2>
     </div>
 
 </body>
