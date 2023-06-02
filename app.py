@@ -20,7 +20,6 @@ def make_pred():
         predictor.append(x)
 
     predictor = np.array(predictor).reshape(1,-1)
-    print(predictor)
     predicted_class = model.predict(predictor)
     if predicted_class[0]==1:
         x = "Your cardiovascular health may be at risk. Seek medical attention for further evaluation."
