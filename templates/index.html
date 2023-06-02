@@ -13,15 +13,15 @@
     <div class="main_container">
         <form action="/make_prediction" method="post">
             <label for="age">Enter your age :- </label>
-            <input type="number" min=5 max=100 name="age" step="any">
+            <input type="number" min=5 max=100 name="age" step="any" required>
             <label for="sex ">Enter your gender :- </label>
-            <select name="sex " id="">
+            <select name="sex "  required>
                 <option selected disabled>Select from the below</option>
                 <option value=0>Female</option>
                 <option value=1>Male</option>
             </select>
             <label for="Chest_pain">Enter your chest pain level :- </label>
-            <select name="chest pain type" id="">
+            <select name="chest pain type"  required>
                 <option selected disabled>Select from the below</option>
                 <option value=1> Typical angina</option>
                 <option value=2>Atypical angina</option>
@@ -30,41 +30,41 @@
 
             </select>
             <label for="resting blood pressure">Resting blood pressure (in mm Hg on admission to the hospital)</label>
-            <input type="number" name="resting blood pressure" step="any">
-            <label for="serum cholestoral">Serum cholestoral in mg/dl</label>
-            <input type="number" name="serum cholestoral" step="any">
+            <input type="number" name="resting blood pressure" step="any" required min=50 max=250>
+            <label for="serum cholestoral">Serum cholestoral in mg/dl (Desirable/Healthy range: Less than 200 mg/dL)</label>
+            <input type="number" name="serum cholestoral" step="any" required min=100 max=700>
             <label for="fasting blood sugar"> Is fasting blood sugar > 120 mg/dl</label>
-            <select name="fasting blood sugar" id="">
+            <select name="fasting blood sugar" required>
                 <option selected disabled>Select from the below</option>
                 <option value=1>True</option>
                 <option value=0>False</option>
             </select>
             <label for="resting electrocardiographic results">Resting electrocardiographic results</label>
-            <select name="resting electrocardiographic results" id="">
+            <select name="resting electrocardiographic results" required>
                 <option selected disabled>Select from the below</option>
                 <option value=0>Normal</option>
                 <option value=1>Having ST-T wave abnormality</option>
                 <option value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
             </select>
             <label for="max heart rate">Maximum heart rate achieved</label>
-            <input type="number" name="max heart rate" step="any">
+            <input type="number" name="max heart rate" step="any" required min=60 max=250>
             <label for="exercise induced angina">Chest pain or discomfort does occurs during exercise.</label>
-            <select name="exercise induced angina" id="">
+            <select name="exercise induced angina" required>
                 <option selected disabled>Select from the given below</option>
                 <option value=1>Yes</option>
                 <option value=0>No</option>
             </select>
-            <label for="oldpeak">ST depression induced by exercise relative to rest(oldpeak)</label>
-            <input type="number" name="oldpeak" step="any">
+            <label for="oldpeak">ST depression induced by exercise relative to rest("oldpeak" value ranges from 0 to 6 millimeters)</label>
+            <input type="number" name="oldpeak" step="any" required min=0 max=7>
             <label for="ST segment">The slope of the peak exercise ST segment</label>
-            <select name="ST segment" id="">
+            <select name="ST segment" required>
                 <option selected disabled>Select from the given below</option>
                 <option value=1>upsloping</option>
                 <option value=2>flat</option>
                 <option value=2>downsloping</option>
             </select>
             <label for="major vessels">Number of major vessels (0-3) colored by flourosopy</label>
-            <select name="major vessels" id="">
+            <select name="major vessels" required>
                 <option selected disabled>Select from the given below</option>
                 <option value=0>0</option>
                 <option value=1>1</option>
@@ -72,7 +72,7 @@
                 <option value=2>3</option>
             </select>
             <label for="thal">Thallium stress test.</label>
-            <select name="thal" id="">
+            <select name="thal" required>
                 <option selected disabled>Select from the given below</option>
                 <option value=3>Normal</option>
                 <option value=7>Reversable defect</option>
