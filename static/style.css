@@ -9,8 +9,7 @@ body {
 
   h2 {
     text-align: center;
-    color: #e83e8c; /* Vibrant font color */
-    font-weight: bold; /* Bold font weight */
+    font-weight: bold; 
     
     padding: 10px;
   }
