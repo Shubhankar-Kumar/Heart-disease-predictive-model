@@ -20,14 +20,17 @@ def make_pred():
         predictor.append(x)
 
     predictor = np.array(predictor).reshape(1,-1)
+    print(predictor)
     predicted_class = model.predict(predictor)
     if predicted_class[0]==1:
-        x = "You need a treatment from a better doctor"
+        x = "Your cardiovascular health may be at risk. Seek medical attention for further evaluation."
+        color = "red"
 
     else:
-        x = "Volla you are perfectly fine"
+        x = "Great news! No signs of heart disease detected. Stay committed to a healthy lifestyle."
+        color = "green"
 
-    return render_template('index.html',pred=x)
+    return render_template('index.html',pred=x,pred_color=color)
 
 
 

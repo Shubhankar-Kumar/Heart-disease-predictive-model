@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <h2>We are making a heart disease predictor let see how our model perform in real world scenerio</h2>
+    <h2 style="color: red;">CardioGuard: Empowering Heart Health with Advanced Disease Prediction</h2>
     <div class="main_container">
         <form action="/make_prediction" method="post">
             <label for="age">Enter your age :- </label>
-            <input type="number" min=5 max=100 name="age">
+            <input type="number" min=5 max=100 name="age" step="any">
             <label for="sex ">Enter your gender :- </label>
             <select name="sex " id="">
                 <option selected disabled>Select from the below</option>
@@ -30,9 +30,9 @@
 
             </select>
             <label for="resting blood pressure">Resting blood pressure (in mm Hg on admission to the hospital)</label>
-            <input type="number" name="resting blood pressure">
+            <input type="number" name="resting blood pressure" step="any">
             <label for="serum cholestoral">Serum cholestoral in mg/dl</label>
-            <input type="number" name="serum cholestoral">
+            <input type="number" name="serum cholestoral" step="any">
             <label for="fasting blood sugar"> Is fasting blood sugar > 120 mg/dl</label>
             <select name="fasting blood sugar" id="">
                 <option selected disabled>Select from the below</option>
@@ -47,7 +47,7 @@
                 <option value=2>Showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
             </select>
             <label for="max heart rate">Maximum heart rate achieved</label>
-            <input type="number" name="max heart rate">
+            <input type="number" name="max heart rate" step="any">
             <label for="exercise induced angina">Chest pain or discomfort does occurs during exercise.</label>
             <select name="exercise induced angina" id="">
                 <option selected disabled>Select from the given below</option>
@@ -55,7 +55,7 @@
                 <option value=0>No</option>
             </select>
             <label for="oldpeak">ST depression induced by exercise relative to rest(oldpeak)</label>
-            <input type="number" name="oldpeak">
+            <input type="number" name="oldpeak" step="any">
             <label for="ST segment">The slope of the peak exercise ST segment</label>
             <select name="ST segment" id="">
                 <option selected disabled>Select from the given below</option>
@@ -66,6 +66,7 @@
             <label for="major vessels">Number of major vessels (0-3) colored by flourosopy</label>
             <select name="major vessels" id="">
                 <option selected disabled>Select from the given below</option>
+                <option value=0>0</option>
                 <option value=1>1</option>
                 <option value=2>2</option>
                 <option value=2>3</option>
@@ -80,7 +81,7 @@
             <button type="submit">Predict</button>
 
         </form>
-        <h2>{{ pred }}</h2>
+        <h2 style="color: {{ pred_color }}">{{ pred }}</h2>
     </div>
 
 </body>
