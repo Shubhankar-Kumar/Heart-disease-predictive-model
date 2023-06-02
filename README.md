@@ -28,11 +28,12 @@ The project is deployed on the Render web hosting platform. Render simplifies th
 
 The project repository contains the following files and directories:
 
-app.py: The Flask application file that handles HTTP requests and model deployment.
-templates/: This directory contains the HTML templates used for rendering the user interface.
-static/css/: This directory contains CSS files for styling the HTML templates.
-dataset_heart.csv: This file contains the dataset used for training and evaluation.
-model.pkl: pickle file containing the trained model
-README.md: This file, providing an overview of the project and instructions for usage.
+- app.py: The Flask application file that handles HTTP requests and model deployment.
+- templates/: This directory contains the HTML templates used for rendering the user interface.
+- static/css/: This directory contains CSS files for styling the HTML templates.
+- dataset_heart.csv: This file contains the dataset used for training and evaluation.
+- model.pkl: pickle file containing the trained model
+- Heart_disease_prediction.ipynb : This contains model development notebook
+- README.md: This file, providing an overview of the project and instructions for usage.
 
 
